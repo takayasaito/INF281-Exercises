@@ -1,0 +1,425 @@
+% See exam.cls and examdoc.tex for the license information
+\documentclass[12pt, answers]{exam}
+
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabulary}
+\usepackage{color}
+\usepackage{multicol}
+%\usepackage{multirow}
+%\usepackage{enumerate}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\addpoints
+
+% In case we're not using hyperref.sty:
+\providecommand{\texorpdfstring}[2]{#1}
+% The following can be used in \section commands
+% without generating pdf warnings:
+\newcommand{\bs}{\texorpdfstring{\char`\\}{}}
+
+\makeindex
+
+\newcommand{\indc}[1]{\index{#1@\texttt{\char`\\#1}}}
+\newcommand{\indcsub}[2]{\index{#1@\texttt{\char`\\#1}!#2}}
+\newcommand{\indcstart}[1]{\index{#1@\texttt{\char`\\#1}|(}}
+\newcommand{\indcstop}[1]{\index{#1@\texttt{\char`\\#1}|)}}
+
+\newcommand{\indt}[1]{\index{#1@\texttt{#1}}}
+\newcommand{\indtsub}[2]{\index{#1@\texttt{#1}!#2}}
+\newcommand{\indtstart}[1]{\index{#1@\texttt{#1}|(}}
+\newcommand{\indtstop}[1]{\index{#1@\texttt{#1}|)}}
+
+\extraheadheight{-.4in}
+
+\pagestyle{headandfoot}
+%\extraheadheight{.2 in}
+\firstpageheader{}{}{}
+\runningheader{}{}{}
+\firstpagefooter{INF281}{Exercise 01}{Page \thepage\ of \numpages}
+\firstpagefootrule
+\runningfooter{INF281}{Exercise 01}{Page \thepage\ of \numpages}
+\runningfootrule
+
+%---------------------------------------------------------------------
+
+\shadedsolutions
+\noprintanswers
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1}
+
+\begin{document}
+
+\section*{INF281 Exercise 01}
+
+%---------------------------------------------------------------------
+\begin{questions}
+
+%%% Question 1
+\question \textbf{Eukaryotic and prokaryotic cells}
+ 
+ Cells are the most basic building blocks of all living organisms. Several aspects differ between prokaryotic and eukaryotic cells.
+  
+\vspace{0.1 in}
+      
+\begin{parts}
+  
+%% 1-(a)
+  \part
+  Which one of the two cell types, prokaryotes or eukaryotes, lacks a distinct nucleus?
+  
+  \begin{solution}[0.35 in]
+  Prokaryotes
+  \end{solution}
+  
+%% 1-(b)
+  \part
+  Can eukaryotes be unicellular?
+  
+  \begin{solution}[0.35 in]
+  Yes
+  \end{solution}
+
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 2
+\question \textbf{Cell organelles}
+  
+A cell consists of a number of specialized subunits called organelles. Answer the most suitable organell that matchs the explanation. 
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 2-(a)
+  \part
+  The key role of this organelle is to produce energy rich molecules for the cell.
+  
+  \begin{solution}[0.35 in]
+  Mitochondria
+  \end{solution}
+
+%% 2-(b)
+  \part
+  It is a membrane-enclosed organelle. It contains genetic material called chromosomes.
+  
+  \begin{solution}[0.35 in]
+  Nucleus
+  \end{solution}
+  
+  \vspace{0.1 in}
+
+\end{parts}
+ 
+%%% Question 3
+\question \textbf{DNA}
+  
+Deoxyribonucleic acid (DNA) is an important molecule that stores generic information. DNA consists of four different nucleotides - Adenine (A), Cytosine (C), Guanine (G), and Thymine (T).
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 3-(a)
+  \part
+  What is the DNA sequence when its opposite strand is ACCGT?
+  
+  \begin{solution}[0.35 in]
+  TGGCA
+  \end{solution}
+  
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 4
+\question \textbf{Central dogma of molecular biology}
+  
+The central dogma of molecular biology describes the flow of genetic information by three processes - Replication, Transcription, and Translation.
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 4-(a)
+  \part
+  What are the two main molecules involved in transcription?
+  
+  \begin{solution}[0.35 in]
+  DNA and RNA
+  \end{solution}
+
+%% 4-(b)
+  \part
+  What are the two main molecules involved in translation?
+  
+  \begin{solution}[0.35 in]
+  RNA and protein
+  \end{solution}
+  
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 5
+\question \textbf{Central dogma of molecular biology}
+  
+Ribonucleic acid (RNA) conveys genetic information from its corresponding DNA to ribosome where proteins are synthesized. Similar to DNA, RNA has four different forms - Adenine (A), Cytosine (C), Guanine (G), and Uracil (U).
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 5-(a)
+  \part
+  What is the transcribed RNA sequence when the corresponding DNA sequence is TATAGC?
+  
+  \begin{solution}[0.35 in]
+  UAUAGC
+  \end{solution}
+  
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 6
+\question \textbf{Genetic code}
+  
+The genetic code defines how three RNA nucleotides, called codon, should be translated into an amino-acid. 
+
+\begin{table}[h]
+\footnotesize
+\begin{center}
+\begin{tabular}{|c|cccc|c|}
+\hline
+\itshape First  & \multicolumn{4}{c|}{\itshape Second position} & \itshape Third \\
+\cline{2-5}
+\itshape position & \makebox[2em]{T} & \makebox[2em]{C} & \makebox[2em]{A} & \makebox[2em]{G} & \itshape position \\ 
+\hline
+   & F & S & Y & C & T \\
+   & F & S & Y & C & C \\
+\raisebox{1.5ex}[0mm]{T} & L & S & \itshape Stop & \itshape Stop & A \\
+   & L & S & \itshape Stop & W & G \\ 
+\hline
+   & L & P & H & R & T \\
+   & L & P & H & R & C \\
+\raisebox{1.5ex}[0mm]{C}    & L & P & Q & R & A \\
+   & L & P & Q & R & G \\ 
+\hline
+   & I & T & N & S & T \\
+   & I & T & N & S & C \\
+\raisebox{1.5ex}[0mm]{A}    & I & T & K & R & A \\
+   & M & T & K & R & G \\ 
+\hline
+   & V & A & D & G & T \\
+   & V & A & D & G & C \\
+\raisebox{1.5ex}[0mm]{G}    & V & A & E & G & A \\
+   & V & A & E & G & G \\ 
+\hline
+\end{tabular}
+%\epsfig{file=gencode.eps,width=.25\textwidth}
+\qquad
+\begin{tabular}{lll}
+A & Ala & Alanine \\
+C & Cys & Cysteine \\
+D & Asp & Aspartic acid \\
+E & Glu & Glutamic acid \\
+F & Phe & Phenylalanine \\
+G & Gly & Glycine \\
+H & His & Histidine \\
+I & Ile & Isoleucine \\
+K & Lys & Lysine \\
+L & Leu & Leucine \\
+M & Met & Methionine \\
+N & Asn & Asparagine \\
+P & Pro & Proline \\
+Q & Gln & Glutamine \\
+R & Arg & Arginine \\
+S & Ser & Serine \\
+T & Thr & Threonine \\
+V & Val & Valine \\
+W & Trp & Tryptophan \\
+Y & Tyr & Tyrosine
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{parts}
+
+%% 6-(a)
+  \part
+  Stop codons are special codons that terminate the protein synthesis. Specify all three stop codons.
+  
+  \begin{solution}[0.35 in]
+  UAA, UGA, UAG
+  \end{solution}
+
+%% 6-(b)
+  \part
+  Both one-letter and three-letter abbreviations are often used instead of the full names. What is the three-letter abbreviation of Tyrosine?
+  
+  \begin{solution}[0.35 in]
+  Tyr
+  \end{solution}
+  
+%% 6-(c)
+  \part
+  What is the one-letter abbreviation of the amino acid that is synthesized from the codon AGA?   
+  
+  \begin{solution}[0.35 in]
+  R (Arginine)
+  \end{solution}
+    
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 7
+\question \textbf{Pairwise alignments}
+  
+Pairwise alignments are two aligned sequences of DNA, RNA, or protein. DNA and RNA sequences consist of four different nucleotides, whereas protein sequences consist of 20 different amino acids. The “-” sign is used to represent a blank or a gap, which indicates an insertion or a deletion from one sequence to the other.
+
+Use the simple scoring scheme and calcuate the score of the following alignments.
+
+\textbf{Scoring scheme: }\\
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1  
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 7-(a)
+  \part
+  Alignment 1
+  \begin{verbatim}
+    q: ATGCT
+    d: CA--T \end{verbatim}
+    
+  \begin{solution}[0.35 in]
+  -1
+  \end{solution}
+
+%% 7-(b)
+  \part
+  Alignment 2
+  \begin{verbatim}
+  q: CAGCT
+  d: C-A-T \end{verbatim}
+  
+  \begin{solution}[0.35 in]
+  0
+  \end{solution}
+    
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 8
+\question \textbf{Brute force approach}
+  
+A brute force approach can be used to find the optimal alignment. Use the sequences $q$ and $d$ below and answer the questions.
+
+\begin{multicols}{2}
+Sequences:
+\begin{verbatim}
+  q: CG, d: AC
+\end{verbatim}
+\vfill\null
+\columnbreak
+
+\noindent Scoring scheme: \\ 
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1
+
+\end{multicols} 
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% 8-(a)
+  \part
+  Identify all possible alignments.
+  
+  \begin{solution}[2.5 in]
+  \begin{verbatim}
+  l = 4  CG--    C-G-    C--G    -CG-    -C-G    --CG
+         --AC    -A-C    -AC-    A--C    A-C-    AC--
+
+  l = 3  CG-   CG-   C-G    C-G    -CG    -CG
+         A-C   -AC   AC-    -AC    A-C    AC-
+
+  l = 2  CG
+         AC	
+  \end{verbatim}
+  \end{solution}
+
+%% 8-(b)
+  \part
+  Identify the optimal alignment with its score.
+  
+  \begin{solution}[0.75 in]
+  \begin{verbatim}
+  CG
+  AC    Score: 0
+  \end{verbatim}
+
+  \end{solution}
+    
+  \vspace{0.1 in}
+
+\end{parts}
+
+%%% Question 9
+\question \textbf{Brute force approach}
+  
+An alignment can be represented as a table with arrows. Vertical and horizontal arrows indicate gaps, while diagonal arrows indicate matches and mismatches.
+
+Identify the alignment that corresponds to the arrows in the following tables.
+
+\begin{parts}
+
+%% 9-(a)
+\part Table 1
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.35 \textwidth]{fig01/alignment_table_exercise_1.png}
+\end{figure}
+
+\begin{solution}[0.75 in]
+\begin{verbatim}
+  q: CAGCT
+  d: CA--T
+\end{verbatim}
+\end{solution}
+  
+%% 9-(b)
+\part Table 2
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.35 \textwidth]{fig01/alignment_table_exercise_2.png}
+\end{figure}
+
+\begin{solution}[0.75 in]
+\begin{verbatim}
+  q: -CAGCT-
+  d: C----AT
+\end{verbatim}
+\end{solution}
+
+\end{parts}
+
+\end{questions}
+%---------------------------------------------------------------------
+       
+\end{document}
+
