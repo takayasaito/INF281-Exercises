@@ -1,78 +1,56 @@
-# INF281 Basics of Bioinformatics Sequence Analysis
+# Exercises and Solutions for INF281 Basics of Bioinformatics Sequence Analysis
 
-[![Build Status](https://travis-ci.org/takayasaito/INF281-Lecture-Notes.svg?branch=master)](https://travis-ci.org/takayasaito/INF281-Lecture-Notes)
+[![Build Status](https://travis-ci.org/takayasaito/INF281-Exercises.svg?branch=master)](https://travis-ci.org/takayasaito/INF281-Exercises)
 
-It uses Travis CI to automatically generate PDF files of the lecture notes for INF281 Basics of bioinformatics sequence analysis from Tex source files. The generated PDFs are available on the [Release page](https://github.com/takayasaito/INF281-Lecture-Notes/releases).
+This repository contains the sources files of the exercises and solutions for INF281 Basics of bioinformatics sequence analysis. The generated PDFs are available on the [Release page](https://github.com/takayasaito/INF281-Exercises/releases).
 
-## Course description
-### Prerequisites
+INF281 Lecture Notes are availabe in [another repository](https://github.com/takayasaito/INF281-Lecture-Notes).
 
-Only basic mathematical background is required. We cover several mathematical concepts where needed. We assume that you know how to read and write basic computer programs, preferably in Java.
-
-### Learning Outcomes
-
-After completing the course you should be able to:
-explain the basis of molecular biology pertaining to the course,
-
-* make local or global pairwise alignments by dynamic programming,
-* compare pairwise and multiple sequence alignment algorithms in terms of challenges and applications,
-* perform sequence based searches in biological databases and subsequent statistical analyses on the search results,
-* review classification performance measures in the fields of biological sequence analysis, and
-* create working implementations of basic bioinformatics algorithms.
-
-### Course structure
-
-#### PART I Introduction
-
-* Introduction
-
-#### PART II Pairwise alignment
-
-* Global pairwise alignment
-
-* Expansion of scoring scheme
-
-* Local pairwise alignment
-
-#### PART III Database search and statistical evaluation
-
-* Database search and BLAST
-
-* Evaluation of alignment scores
-
-* Model evaluation
-
-#### PART IV Multiple alignment and phylogenetic tree
-
-* Multiple alignment
-
-* Phylogenetic tree
-
-* Progressive alignment and CLUSTAL
-
-#### PART V Scoring scheme and sequence patterns
-
-* Score matrix
-
-* Sequence profiles
-
-* Hidden Markov model
-
-* Sequence patterns
-
-#### PART VI RNA structure prediction
-
-* RNA structure prediction
-
-### Readings
-
-> PROTEIN BIOINFORMATICS
->
-> An Algorithmic Approach to Sequence and Structure Analysis
->
-> I. Eidhammer, I. Jonassen, and W.R.Taylor
-
-* Chapters 1-7, Appendix A, B
-* Print ISBN: 9780470848395
-* Online ISBN: 9780470092620
-* DOI: 10.1002/9780470092620
+## Gropup exercises
+| Exercise No | Section No | Section Name                          |
+|-------------|------------|---------------------------------------|
+| 01          | 01-1       | Introduction to Molecular Biology     |
+|             | 02-1       | Global pairwise alignment             |
+|             | 02-2       | Alignment by brute-force              |
+|             | 02-3       | Table representation of alignment     |
+| 02          | 02-4       | Global alignment with DP              |
+|             | 02-5       | Backtracking                          |
+|             | 03-1       | Usage of score matrices               |
+| 03          | 03-3       | General gap penalties                 |
+|             | 03-4       | Affine gap penalties                  |
+|             | 03-5       | Sequence distance                     |
+| 04          | 04-2       | Dot matrix                            |
+|             | 04-3       | Local alignment with DP               |
+|             | 05-3       | N-gram based search                   |
+|             | 05-4       | Lookup table of matching n-grams      |
+| 05          | 05-5       | Finite-state machine with n-grams     |
+|             | 06-2       | Evaluation of global alignment        |
+|             | 06-3       | Evaluation of local alignment         |
+| 06          | 06-4       | Evaluation of database search         |
+|             | 06-5       | Bit score and e-value                 |
+|             | 07-1       | Evaluation of binary classifiers      |
+|             | 07-2       | Confusion matrix                      |
+|             | 07-3       | Basic evaluation measures             |
+| 07          | 07-4       | Threshold free measures               |
+|             | 08-1       | Multiple alignment                    |
+|             | 09-1       | Phylogenetic tree                     |
+|             | 09-3       | UPGMA                                 |
+| 08          | 09-4       | Maximum parsimony                     |
+|             | 09-5       | Maximum likelihood                    |
+|             | 10-1       | Progressive alignment                 |
+| 09          | 10-2       | Alignment clustering                  |
+|             | 10-3       | Aligning methods                      |
+| 10          | 11-1       | Scoring schemes for protein sequences |
+|             | 11-2       | PAM - accepted mutations              |
+| 11          | 11-3       | PAM - substitution matrix             |
+|             | 11-4       | BLOSUM                                |
+|             | 12-2       | Position weight matrix                |
+|             | 12-3       | Sequence profiles                     |
+| 12          | 12-3       | Sequence profiles                     |
+|             | 13-1       | Hidden Markov model                   |
+|             | 13-2       | Viterbi algorithm                     |
+|             | 13-3       | HMM profile                           |
+| 13          | 14-1       | Sequence patterns                     |
+|             | 14-3       | Pattern discovery                     |
+|             | 15-1       | RNA structure                         |
+|             | 15-2       | Nussinov algorithm                    |
