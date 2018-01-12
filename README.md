@@ -4,7 +4,7 @@
 
 This repository contains the sources files of the exercises and solutions for INF281 Basics of bioinformatics sequence analysis. The generated PDFs are available on the [Release page](https://github.com/takayasaito/INF281-Exercises/releases).
 
-INF281 Lecture Notes are availabe in [another repository](https://github.com/takayasaito/INF281-Lecture-Notes).
+INF281 Lecture Notes are availabe [here](https://github.com/takayasaito/INF281-Lecture-Notes).
 
 ## Gropup exercises
 | Exercise No | Section No | Section Name                          |
