@@ -1,0 +1,40 @@
+\question \textbf{Pairwise alignments}
+  
+Pairwise alignments are two aligned sequences of DNA, RNA, or protein. DNA and RNA sequences consist of four different nucleotides, whereas protein sequences consist of 20 different amino acids. The  ``-'' sign is used to represent a blank or a gap, which indicates an insertion or a deletion from one sequence to the other.
+
+Use the simple scoring scheme and calcuate the score of the following alignments.
+
+\textbf{Scoring scheme: }\\
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1  
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part
+  Alignment 1
+  \begin{verbatim}
+    q: ATGCT
+    d: CA--T \end{verbatim}
+    
+  \begin{solution}[0.35 in]
+  -1
+  \end{solution}
+
+%% (b)
+  \part
+  Alignment 2
+  \begin{verbatim}
+    q: CAGCT
+    d: C-A-T \end{verbatim}
+  
+  \begin{solution}[0.35 in]
+  0
+  \end{solution}
+    
+  \vspace{0.1 in}
+
+\end{parts}

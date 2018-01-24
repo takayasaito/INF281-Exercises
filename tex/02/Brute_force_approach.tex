@@ -1,0 +1,55 @@
+\question \textbf{Brute force approach}
+  
+A brute force approach can be used to find the optimal alignment. Use the sequences $q$ and $d$ below and answer the questions.
+
+\begin{multicols}{2}
+Sequences:
+\begin{verbatim}
+  q: CG, d: AC
+\end{verbatim}
+\vfill\null
+\columnbreak
+
+\noindent Scoring scheme: \\ 
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1
+
+\end{multicols} 
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part
+  Identify all possible alignments.
+  
+  \begin{solution}[2.5 in]
+  \begin{verbatim}
+  l = 4  CG--    C-G-    C--G    -CG-    -C-G    --CG
+         --AC    -A-C    -AC-    A--C    A-C-    AC--
+
+  l = 3  CG-   CG-   C-G    C-G    -CG    -CG
+         A-C   -AC   AC-    -AC    A-C    AC-
+
+  l = 2  CG
+         AC	
+  \end{verbatim}
+  \end{solution}
+
+%% (b)
+  \part
+  Identify the optimal alignment with its score.
+  
+  \begin{solution}[0.75 in]
+  \begin{verbatim}
+  CG
+  AC    Score: 0
+  \end{verbatim}
+
+  \end{solution}
+    
+  \vspace{0.1 in}
+
+\end{parts}
