@@ -1,0 +1,60 @@
+\question \textbf{Cell update with affine gap penalty}
+  
+DP for affine gap penalty requires three tables -– E, F, and G -– with the following cell updating rules.
+
+Use the following scoring scheme and gap penalties to answer the questions.
+
+\textbf{Scoring scheme: }\\
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad $g_{open} = 1$, $g_{extend} = 0.1 $ 
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part
+  What is the gap penalty when $l = 2$.
+    
+  \begin{solution}[0.35 in]
+  $g_{l=2} = 1+ (2 - 1) * 0.1 = 1.1$
+  \end{solution}
+
+%% (b)
+  \part
+  Calculate the scores of the alignments.
+  
+\begin{enumerate}
+\item 
+  \begin{verbatim}
+    q: CAGCT
+    d: CT--T \end{verbatim}
+    
+  \begin{solution}[0.35 in]
+  0.9
+  \end{solution}
+  
+\item 
+  \begin{verbatim}
+    q: CAGCT
+    d: C-T-T \end{verbatim}
+
+  \begin{solution}[0.35 in]
+  0
+  \end{solution}
+      
+\item 
+  \begin{verbatim}
+    q: CCT--
+    d: ---CT \end{verbatim}
+
+  \begin{solution}[0.35 in]
+  -2.3
+  \end{solution}
+      
+\end{enumerate}  
+ 
+  \vspace{0.1 in}
+
+\end{parts}
