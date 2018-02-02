@@ -14,6 +14,10 @@ script:
 - pdflatex -output-directory ../_build ./Exercise02.tex
 - pdflatex -output-directory ../_build ./Exercise02_solutions.tex
 - pdflatex -output-directory ../_build ./Exercise02_solutions.tex
+- pdflatex -output-directory ../_build ./Exercise03.tex
+- pdflatex -output-directory ../_build ./Exercise03.tex
+- pdflatex -output-directory ../_build ./Exercise03_solutions.tex
+- pdflatex -output-directory ../_build ./Exercise03_solutions.tex
 - cd ..
 
 deploy:
