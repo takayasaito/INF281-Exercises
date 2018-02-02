@@ -1,0 +1,35 @@
+\question \textbf{Affine gap with three DP tables}
+  
+Use the following scoring scheme and gap penalties to find the optimal alignment score of two sequences q = AG and d = GGGC.
+
+\medskip 
+
+\textbf{Scoring scheme: }\\
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad $g_{open} = 1$, $g_{extend} = 0.1 $ 
+
+\vspace{0.1 in}
+\newpage
+
+\begin{parts}
+
+%% (a)
+  \part Fill all blank cells in the DP tables E, F, and G.
+    
+\begin{figure}[h]
+  \centering
+      \includegraphics[width=0.75 \textwidth]{fig03/affine_dp_update_solution.png}
+\end{figure}
+
+%% (b)
+  \part
+  What is the optimal score?
+
+  \begin{solution}[0.35 in]
+  $-0.1$
+  \end{solution}
+     
+  \vspace{0.1 in}
+
+\end{parts}
