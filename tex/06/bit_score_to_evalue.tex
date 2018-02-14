@@ -1,0 +1,26 @@
+\question \textbf{Bit score to e-value}
+  
+The e-value represents the expected number of hits when homologous sequence are searched on a database of a particular size. It can be calculated from a bit score as follows. 
+ 
+ $E = \dfrac{\mathrm{Size \, of \, search \, space}}{2^{\mathrm{bit-score}}}$
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part What is the e-value when the size of search space is 3200 and the bit score is 4?
+
+\begin{solution}[0.75 in]
+$\dfrac{3200}{2^4} = \dfrac{3200}{16} = 200$
+\end{solution}
+
+%% (b)
+\part Assume we can calculate a search space size as $m \times n$ where $m$ is the query sequence size and $n$ is the total character size of a database. What is the e-value when $m$ is 20, $n$ is 4000, and the bit score is 3?
+
+\begin{solution}[0.75 in]
+$\dfrac{20 \times 4000}{2^3} = \dfrac{80000}{8} = 10000$
+\end{solution}
+
+\end{parts}
+
