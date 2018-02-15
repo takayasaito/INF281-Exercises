@@ -1,0 +1,101 @@
+\question \textbf{Gumbel distribution}
+  
+Use the alignment scores between q and 5 randomly generated sequences below to answer the following questions.
+
+\begin{verbatim}
+    q: ACGTA
+\end{verbatim}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Randomly generated sequence & Alignment score \\ \hline
+ACGTA                       & 4               \\ \hline
+TTACG                       & 5               \\ \hline
+CGCGA                       & 6               \\ \hline
+ATTAT                       & 4               \\ \hline
+CGATC                       & 6               \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part What is the mean of the scores?
+
+\begin{align*}‎
+\bar{x} =\dfrac{1}{n} \sum_{i=1}^{n}x_{i}
+\end{align*}
+
+\begin{solution}[0.35 in]
+5
+\end{solution}
+
+%% (b)
+\part What is the standard deviation of the scores?
+
+\begin{align*}‎
+s = \sqrt{\dfrac{\sum_{i=1}^{n}(x_{i}-\bar{x})^2}{n-1}}
+\end{align*}
+
+\begin{solution}[0.35 in]
+1
+\end{solution}
+
+%% (c)
+\part The parameters $\mu$ and $\lambda$ of the Gumbel distribution can be estimated from the mean and the variance of a sample. Calculate  lambda and mu.
+\medskip 
+
+\begin{center}
+$\mathrm{lamda} \approx \dfrac{1.282}{s}$
+\end{center}
+\medskip 
+
+\begin{center}
+$\mathrm{mu} \approx \bar{x} - \dfrac{0.577}{\mathrm{lamda}}$
+\end{center}
+\medskip 
+
+\begin{solution}[0.35 in]
+lamda: 1.282, mu: 4.55
+\end{solution}
+
+%
+% NEWPAGE
+%
+\newpage
+
+%% (d)
+\part What is the p-value when the score of an alignment is 4.55?
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+x  & exp(x) \\ \hline
+0  & 1      \\ \hline
+-1 & 0.3679 \\ \hline
+-2 & 0.1353 \\ \hline
+-3 & 0.0497 \\ \hline
+\end{tabular}
+\end{table}
+
+$P[Y>4.55]=1-F_Y (4.55)=1 - \exp (-e^{-\lambda(4.55-\mu)})$ \\
+
+\begin{solution}[0.35 in]
+$1-0.3679=0.6321$
+\end{solution}
+
+%% (e)
+\part What is the conclusion of the test in terms of finding homologues?
+
+\begin{solution}[0.35 in]
+The sequences of the alignment with score 4.55 are not homologous.
+\end{solution}
+
+
+\end{parts}
+

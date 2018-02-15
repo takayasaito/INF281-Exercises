@@ -1,0 +1,67 @@
+\question \textbf{Non-parametric test}
+  
+A non-parametric test is used to determine a p-value for the optimal score of a global alignment. Assume we randomly generated 9 sequences and calculated the alignment scores as follows.
+
+\begin{verbatim}
+    q: AACG
+\end{verbatim}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Seq No. & 1   & 2   & 3   & 4   & 5   & 6   & 7   & 8   & 9   \\ \hline
+Score   & 0.2 & 0.4 & 0.5 & 1.2 & 1.2 & 1.5 & 1.9 & 2.2 & 2.1 \\ \hline
+\end{tabular}
+\end{table}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part What are $H_{0}$ (null hypothesis) and $H_{1}$ (alternative hypothesis) if you want to use a statistical hypothesis test to evaluate a global pairwise alignment in terms of finding homologues?
+
+\begin{solution}[0.35 in]
+$H_{0}$:  Sequences are not homologous, $H_{1}$:  Sequences are homologous
+\end{solution}
+
+%% (b)
+\part Calculate the p-value for the alignment below. 
+
+\begin{verbatim}
+    q: AACG
+    d: AGTG
+
+    Score: 2
+\end{verbatim}
+\medskip 
+
+The p-value can be calculated as:
+
+\begin{center}
+$p=(b+1)/(n+1)$
+\end{center}
+
+where $b$ is the number of randomly generated scores above the score of the original alignment, and $n$ is the sample size. 
+
+\begin{solution}[0.35 in]
+p-value:  0.3
+\end{solution}
+
+%% (c)
+\part Is the test result statistically significant when $\alpha$ = 0.05?
+
+\begin{solution}[0.35 in]
+No.
+\end{solution}
+
+%% (d)
+\part What is the conclusion of the test in terms of finding homologues?
+
+\begin{solution}[0.35 in]
+q and d are not homologous.
+\end{solution}
+
+\end{parts}
+
