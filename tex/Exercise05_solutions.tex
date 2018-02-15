@@ -52,8 +52,10 @@
 %---------------------------------------------------------------------
 
 \shadedsolutions
-\noprintanswers
+%\noprintanswers
 \definecolor{SolutionColor}{rgb}{0.8,0.9,1}
+\newcommand{\mybox}[1]{\par\noindent\colorbox{SolutionColor}
+{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
 
 \begin{document}
 
@@ -83,10 +85,10 @@
 \newpage
 
 %%% Question 7
-\input{07/basic_measures_from_confusion_matrix.tex}
+\input{07/basic_measures_from_confusion_matrix_solution.tex}
 
 %%% Question 8
-\input{07/measures_with_multiple_thresholds.tex}
+\input{07/measures_with_multiple_thresholds_solution.tex}
 
 \end{questions}
 %---------------------------------------------------------------------

@@ -14,8 +14,8 @@
 \usepackage{float}
 \usepackage{colortbl}
 \usepackage[table,xcdraw]{xcolor}
-
 \usepackage{array}
+
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \addpoints
@@ -44,9 +44,9 @@
 %\extraheadheight{.2 in}
 \firstpageheader{}{}{}
 \runningheader{}{}{}
-\firstpagefooter{INF281}{Exercise 05}{Page \thepage\ of \numpages}
+\firstpagefooter{}{Model evaluation}{Page \thepage\ of \numpages}
 \firstpagefootrule
-\runningfooter{INF281}{Exercise 05}{Page \thepage\ of \numpages}
+\runningfooter{}{Model evaluation}{Page \thepage\ of \numpages}
 \runningfootrule
 
 %---------------------------------------------------------------------
@@ -55,37 +55,19 @@
 \noprintanswers
 \definecolor{SolutionColor}{rgb}{0.8,0.9,1}
 
+\setcounter{section}{4}
+
 \begin{document}
 
-\section*{INF281 Exercise 05}
+\section{Exercises -- Model evaluation}
 
 %---------------------------------------------------------------------
 \begin{questions}
 
 %%% Question 1
-\input{06/non_parametric_test.tex}
-\newpage
-
-%%% Question 2
-\input{06/gumbel_distribution.tex}
-\bigskip 
-
-%%% Question 3
-\input{06/bit_score.tex}
-\newpage
-
-%%% Question 4
-\input{06/bit_score_to_evalue.tex}
-\bigskip 
-
-%%% Question 6
-\input{06/raw_score_to_evalue.tex}
-\newpage
-
-%%% Question 7
 \input{07/basic_measures_from_confusion_matrix.tex}
 
-%%% Question 8
+%%% Question 2
 \input{07/measures_with_multiple_thresholds.tex}
 
 \end{questions}
