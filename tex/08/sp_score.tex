@@ -1,0 +1,63 @@
+\question \textbf{SP score}
+
+The SP (sum-of-pairs) score is used to evaluate multiple sequence alignments.
+ 
+\[
+S(\mathcal{A}) = \sum_{i=1}^{m-1} \sum_{j=i+1}^{m} S(\bar{s}^i, \bar{s}^j)
+\]
+
+Use the simple scoring scheme and the alignment $\mathcal{A}$ to answer the following questions.
+
+\begin{multicols}{2}
+Alignment $\mathcal{A}$:
+\begin{verbatim}
+  Seq1: A-G
+  Seq2: GCG
+  Seq3: G-T
+\end{verbatim}
+\vfill\null
+\columnbreak
+
+\noindent Scoring scheme: \\ 
+\null \quad $R_{ab}$ = 1 for a = b \\ 
+\null \quad $R_{ab}$ = 0 for a $\neq$ b \\ 
+\null \quad g = 1
+
+\end{multicols} 
+
+\textbf{N.B.} The score of a column with two blanks in a pairwise alignment should be 0.
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part Calculate the pairwise score $S(\bar{s}^1, \bar{s}^2)$.
+  
+\begin{solution}[0.35 in]
+0
+\end{solution}
+
+%% (b)
+  \part Calculate the pairwise score $S(\bar{s}^1, \bar{s}^3)$.
+
+\begin{solution}[0.35 in]
+0
+\end{solution}
+
+%% (c)
+  \part Calculate the pairwise score $S(\bar{s}^2, \bar{s}^3)$.
+  
+\begin{solution}[0.35 in]
+0
+\end{solution}
+
+%% (d)
+  \part Calculate the SP score $S(\mathcal{A})$.
+
+\begin{solution}[0.35 in]
+$0 + 0 + 0 = 0$ 
+\end{solution}
+
+\end{parts}
+
