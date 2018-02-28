@@ -1,0 +1,71 @@
+\question \textbf{UPGMA}
+
+UPGMA is an unweighted version of PGMA (pair-group method using arithmetic mean) for reconstructing a phylogenetic tree. Pairwise sequence alignments are used to calculate the distances among four sequences A, B, C, and D.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+                       & A                      & B                      & C                      & D                      \\ \cline{2-5} 
+\multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{2} & \multicolumn{1}{l|}{7} & \multicolumn{1}{l|}{7} \\ \cline{2-5} 
+B                      & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{5} & \multicolumn{1}{l|}{9} \\ \cline{3-5} 
+C                      &                        & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{8} \\ \cline{4-5} 
+D                      &                        &                        & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} \\ \cline{5-5} 
+\end{tabular}
+\end{table}
+
+Below are two examples of the distance calculation that can be used for UPGMA.
+
+\[
+d_{(\alpha\beta),\gamma}=\dfrac{d_{\alpha,\gamma} + d_{\beta,\gamma}}{2}, \quad d_{(\alpha\beta\gamma),\delta}=\dfrac{d_{\alpha,\delta} + d_{\beta,\gamma} + d_{\delta,\gamma}}{3}
+\]
+
+\begin{parts}
+
+\vspace{0.1 in}
+
+%% (a)
+  \part Identify the first internal node and update the distance matrix accordingly.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+{\color[HTML]{FFFFFF} }                          & {\color[HTML]{FFFFFF} (AB)}                   & {\color[HTML]{FFFFFF} C}                      & {\color[HTML]{FFFFFF} D}                      \\ \cline{2-4} 
+\multicolumn{1}{c|}{{\color[HTML]{FFFFFF} (AB)}} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 0}} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 6}} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 8}} \\ \cline{2-4} 
+{\color[HTML]{FFFFFF} C}                         & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }}  & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 0}} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 8}} \\ \cline{3-4} 
+{\color[HTML]{FFFFFF} D}                         & {\color[HTML]{FFFFFF} }                       & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }}  & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} 0}} \\ \cline{4-4} 
+\end{tabular}
+\end{table}
+
+%% (b)
+  \part Identify the second internal node and update the distance matrix accordingly.
+  
+  \begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+{\color[HTML]{FFFFFF} }                           & {\color[HTML]{FFFFFF} (ABC)}                 & {\color[HTML]{FFFFFF} D}                     \\ \cline{2-3} 
+\multicolumn{1}{c|}{{\color[HTML]{FFFFFF} (ABC)}} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }} \\ \cline{2-3} 
+{\color[HTML]{FFFFFF} D}                          & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }} & \multicolumn{1}{c|}{{\color[HTML]{FFFFFF} }} \\ \cline{3-3} 
+\end{tabular}
+\end{table}
+
+%% (c)
+  \part Reconstrut a rooted tree from the calcualted distances.
+  
+  \vspace{1.4 in}
+  
+%% (d)
+  \part  Fill the distances of the reconstructed tree.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{lllll}
+                       & A                      & B                      & C                      & D                      \\ \cline{2-5} 
+\multicolumn{1}{l|}{A} & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{2-5} 
+B                      & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} \\ \cline{3-5} 
+C                      &                        & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} & \multicolumn{1}{l|}{} \\ \cline{4-5} 
+D                      &                        &                        & \multicolumn{1}{l|}{}  & \multicolumn{1}{l|}{0} \\ \cline{5-5} 
+\end{tabular}
+\end{table}
+  
+\end{parts}
+
