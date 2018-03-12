@@ -30,6 +30,10 @@ script:
 - pdflatex -output-directory ../_build ./Exercise06.tex
 - pdflatex -output-directory ../_build ./Exercise06_solutions.tex
 - pdflatex -output-directory ../_build ./Exercise06_solutions.tex
+- pdflatex -output-directory ../_build ./Exercise07.tex
+- pdflatex -output-directory ../_build ./Exercise07.tex
+- pdflatex -output-directory ../_build ./Exercise07_solutions.tex
+- pdflatex -output-directory ../_build ./Exercise07_solutions.tex
 - cd ..
 
 deploy:
