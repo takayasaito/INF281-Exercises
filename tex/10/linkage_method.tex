@@ -1,0 +1,57 @@
+\question \textbf{Linkage clustering method for progressive alignment}
+
+Select two alignments from the three alignments, $\mathcal{A}^1={s^1}$, $\mathcal{A}^2={s^2, s^3}$, and $\mathcal{A}^3={s^4, s^5}$, for clustering.
+
+\noindent
+\begin{center}
+Pairwise scores
+\end{center}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+   & $s^1$ & $s^2$ & $s^3$ & $s^4$ & $s^5$ \\ \hline
+$s^1$ & -  & 2  & 3  & 1  & 6  \\ \hline
+$s^2$ &    & -  & -  & 4  & 5  \\ \hline
+$s^3$ &    &    & -  & 3  & 4  \\ \hline
+$s^4$ &    &    &    & -  & -  \\ \hline
+$s^5$ &    &    &    &    & -  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{parts}
+
+\vspace{0.1 in}
+
+%% (a)
+  \part Use the average linkage.
+
+\begin{solution}[0.35 in]
+$\mathcal{A}^2$ and $\mathcal{A}^3$: 
+$S(\mathcal{A}^1, \mathcal{A}^2) = 2.5$, 
+$S(\mathcal{A}^1,\mathcal{A}^3) = 3.5$, 
+$S(\mathcal{A}^2, \mathcal{A}^3) = 4$
+\end{solution}
+
+%% (b)
+  \part Use the maximum linkage.
+
+\begin{solution}[0.35 in]
+$\mathcal{A}^1$ and $\mathcal{A}^3$: 
+$S(\mathcal{A}^1, \mathcal{A}^2) = 3 $, 
+$S(\mathcal{A}^1,\mathcal{A}^3) = 6 $, 
+$S(\mathcal{A}^2, \mathcal{A}^3) = 5$
+\end{solution}
+
+%% (c)
+  \part Use the minimum linkage.
+
+\begin{solution}[0.35 in]
+$\mathcal{A}^2$ and $\mathcal{A}^3$: 
+$S(\mathcal{A}^1, \mathcal{A}^2) = 2$, 
+$S(\mathcal{A}^1,\mathcal{A}^3) = 1$, 
+$S(\mathcal{A}^2, \mathcal{A}^3) = 3$
+\end{solution}
+
+\end{parts}
+
