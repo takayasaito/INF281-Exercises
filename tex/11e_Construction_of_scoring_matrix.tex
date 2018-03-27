@@ -1,0 +1,81 @@
+% See exam.cls and examdoc.tex for the license information
+\documentclass[12pt, answers]{exam}
+
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{tabulary}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{array}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\addpoints
+
+% In case we're not using hyperref.sty:
+\providecommand{\texorpdfstring}[2]{#1}
+% The following can be used in \section commands
+% without generating pdf warnings:
+\newcommand{\bs}{\texorpdfstring{\char`\\}{}}
+
+\makeindex
+
+\newcommand{\indc}[1]{\index{#1@\texttt{\char`\\#1}}}
+\newcommand{\indcsub}[2]{\index{#1@\texttt{\char`\\#1}!#2}}
+\newcommand{\indcstart}[1]{\index{#1@\texttt{\char`\\#1}|(}}
+\newcommand{\indcstop}[1]{\index{#1@\texttt{\char`\\#1}|)}}
+
+\newcommand{\indt}[1]{\index{#1@\texttt{#1}}}
+\newcommand{\indtsub}[2]{\index{#1@\texttt{#1}!#2}}
+\newcommand{\indtstart}[1]{\index{#1@\texttt{#1}|(}}
+\newcommand{\indtstop}[1]{\index{#1@\texttt{#1}|)}}
+
+\extraheadheight{-.4in}
+
+\pagestyle{headandfoot}
+%\extraheadheight{.2 in}
+\firstpageheader{}{}{}
+\runningheader{}{}{}
+\firstpagefooter{}{Progressing alignment}{Page \thepage\ of \numpages}
+\firstpagefootrule
+\runningfooter{}{Progressing alignment}{Page \thepage\ of \numpages}
+\runningfootrule
+
+%---------------------------------------------------------------------
+
+\shadedsolutions
+\noprintanswers
+\definecolor{SolutionColor}{rgb}{0.8,0.9,1}
+
+\setcounter{section}{10}
+
+\begin{document}
+
+\section{Exercises -- Construction of scoring matrix}
+
+%---------------------------------------------------------------------
+\begin{questions}
+
+%%% Question 1
+\input{11/scores_of_protein_sequences.tex}
+
+%%% Question 2
+\input{11/probabilities_of_accepted_mutations.tex}
+
+%%% Question 3
+\input{11/relative_mutability_of_PAM.tex}
+\newline
+
+\end{questions}
+%---------------------------------------------------------------------
+       
+\end{document}
+
