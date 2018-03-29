@@ -1,0 +1,94 @@
+\question \textbf{Profile search}
+
+A sequence profile can take gap penalties into account. Calculate the score of the alignment between the DNA profile below and a DNA segment. 
+
+\noindent
+\begin{center}
+A DNA profile of length 4
+\end{center}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+  & A  & G  & C  & T  & Gap \\ \hline
+1 & 5  & -5 & -2 & -1 & 10  \\ \hline
+2 & -2 & 3  & 4  & -7 & 10  \\ \hline
+3 & 1  & 2  & 1  & -1 & 5   \\ \hline
+4 & -3 & 3  & -2 & 7  & 10  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{itemize}
+\item P1, P2, P3, P4: profile blocks at positions 1 - 4
+\item Gap penalty (for segments): 4 
+\end{itemize}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part Profile search on segment D1
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|r|c|c|c|c|}
+\hline
+Profile: & P1 & P2 & P3 & P4 \\ \hline
+D1: & A  & C  & G  & T  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{solution}[0.35 in]
+$5 + 4 + 1 + 7 = 17$
+\end{solution}  
+
+%% (b)
+  \part Profile search on segment D2
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+Profile: & P1 & P2 & - & P3 & P4 \\ \hline
+D2: & A  & C  & C & G  & T   \\ \hline
+\end{tabular}
+\end{table}
+
+ \begin{solution}[0.35 in]
+$5 + 4 + (-5) + 2 + 7 = 13$
+\end{solution}  
+
+%% (c)
+  \part Profile search on segment D3
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|r|c|c|c|c|}
+\hline
+Profile: & P1 & P2 & P3 & P4 \\ \hline
+D3: & A  & -  & G  & T  \\ \hline
+\end{tabular}
+\end{table}
+
+ \begin{solution}[0.35 in]
+$5 + (-4) + 2 + 7 = 10$
+\end{solution}  
+
+%% (d)
+  \part Profile search on segment D4
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|r|c|c|c|c|c|}
+\hline
+Profile: & P1 & P2 & - & P3 & P4 \\ \hline
+D4: & - & A  & C  & G  & T   \\ \hline
+\end{tabular}
+\end{table}
+
+ \begin{solution}[0.35 in]
+$(-4) + (-2) + (-10) + 2 + 7 = -7$
+\end{solution}  
+
+\end{parts}
