@@ -1,0 +1,66 @@
+\question \textbf{Sequence profile}
+
+A sequence profile is similar to PWM, but it uses a scoring scheme. Use the following definitions to calculate the profile values.
+\begin{align*}
+Prof_{ra} &: \dfrac{1}{m_r} \sum_{b \in M} R_{ba}F_{rb} \\
+F_{rb} &: \text{The number of occurrences of } b \text{ at position } r \\
+R_{ba} &: \text{Pairwise score between } b \text{ and } a \\
+m_r &: \text{The number of residues without gaps at position } r
+\end{align*}
+
+Scoring matrix:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+  & A & G & C & T \\ \hline
+A &  2 &  1 & -3  & -2  \\ \hline
+G &  1 &  3 &  -2 & -1  \\ \hline
+C & -3 & -2  & 4  & 1  \\ \hline
+T & -2 & -1  & 1  &  2 \\ \hline
+\end{tabular}
+\end{table}
+
+MSA
+\begin{verbatim}
+   Seq1 GT
+   Seq2 -G
+   Seq3 CA
+\end{verbatim}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part Calculate the profile values of position 1.
+
+A1:  \\
+G1:  \\
+C1:  \\
+T1:  \\
+
+%% (b)
+  \part Calculate the profile values of position 2.
+
+A2:  \\
+G2:  \\
+C2:  \\
+T2:  \\
+
+%% (c)
+  \part Make a profile matrix.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+  & 1                        & 2                        \\ \hline
+A & \quad \quad  \quad  & \quad  \quad \quad \\ \hline
+G & \quad \quad \quad  & \quad \quad \quad  \\ \hline
+C & \quad \quad  \quad & \quad  \quad \quad \\ \hline
+T & \quad \quad  \quad  &  \quad  \quad \quad \\ \hline
+\end{tabular}
+\end{table}
+
+\end{parts}

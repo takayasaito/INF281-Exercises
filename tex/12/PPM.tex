@@ -1,0 +1,47 @@
+\question \textbf{PPM (Position probability matrix)}
+
+PWM (position weight matrix) is a popular method to find sequenced patterns. It can be generated from PPM (position probability matrix) and PFM (position frequency matrix).
+
+\begin{verbatim}
+   Seq1 CAA
+   Seq2 CAG
+   Seq3 GAC
+   Seq4 ATT
+\end{verbatim}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part Create a PFM from Seq1, Seq2, Seq3, and Seq4.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+  & 1 & 2 & 3 \\ \hline
+A & \quad \quad  \quad  & \quad \quad  \quad  &  \quad \quad  \quad \\ \hline
+G &  \quad \quad  \quad & \quad \quad  \quad  &  \quad \quad  \quad \\ \hline
+C &  \quad \quad  \quad & \quad \quad  \quad  &  \quad \quad  \quad \\ \hline
+T &  \quad \quad  \quad & \quad \quad  \quad  &  \quad \quad  \quad \\ \hline
+\end{tabular}
+\end{table}
+
+%% (b)
+  \part Create a PPM from Seq1, Seq2, Seq3, and Seq4.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+  & 1 & 2 & 3 \\ \hline
+A & \quad \quad  \quad  & \quad \quad  \quad  & \quad \quad  \quad  \\ \hline
+G & \quad \quad  \quad  & \quad \quad  \quad  & \quad \quad  \quad  \\ \hline
+C & \quad \quad  \quad  & \quad \quad  \quad  &  \quad \quad  \quad \\ \hline
+T & \quad \quad  \quad  & \quad \quad  \quad  & \quad \quad  \quad  \\ \hline
+\end{tabular}
+\end{table}
+ 
+
+\end{parts}

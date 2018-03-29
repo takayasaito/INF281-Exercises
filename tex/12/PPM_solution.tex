@@ -1,0 +1,46 @@
+\question \textbf{PPM (Position probability matrix)}
+
+PWM (position weight matrix) is a popular method to find sequenced patterns. It can be generated from PPM (position probability matrix) and PFM (position frequency matrix).
+
+\begin{verbatim}
+   Seq1 CAA
+   Seq2 CAG
+   Seq3 GAC
+   Seq4 ATT
+\end{verbatim}
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part Create a PFM from Seq1, Seq2, Seq3, and Seq4.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+  & 1                        & 2                        & 3                        \\ \hline
+A & \cellcolor[HTML]{CCE5FF} 1 & \cellcolor[HTML]{CCE5FF} 3 & \cellcolor[HTML]{CCE5FF} 1 \\ \hline
+G & \cellcolor[HTML]{CCE5FF} 1 & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 1 \\ \hline
+C & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 1 \\ \hline
+T & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 1 & \cellcolor[HTML]{CCE5FF} 1 \\ \hline
+\end{tabular}
+\end{table}
+
+%% (b)
+  \part Create a PPM from Seq1, Seq2, Seq3, and Seq4.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+  & 1                        & 2                        & 3                        \\ \hline
+A & \cellcolor[HTML]{CCE5FF} 0.25 & \cellcolor[HTML]{CCE5FF} 0.75 & \cellcolor[HTML]{CCE5FF} 0.25 \\ \hline
+G & \cellcolor[HTML]{CCE5FF} 0.25 & \cellcolor[HTML]{CCE5FF} 0      & \cellcolor[HTML]{CCE5FF} 0.25 \\ \hline
+C & \cellcolor[HTML]{CCE5FF} 0.5   & \cellcolor[HTML]{CCE5FF} 0      & \cellcolor[HTML]{CCE5FF} 0.25 \\ \hline
+T & \cellcolor[HTML]{CCE5FF} 0      & \cellcolor[HTML]{CCE5FF} 0.25 & \cellcolor[HTML]{CCE5FF} 0.25 \\ \hline
+\end{tabular}
+\end{table}
+ 
+\end{parts}
