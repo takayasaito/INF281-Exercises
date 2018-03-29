@@ -1,0 +1,46 @@
+\question \textbf{The PROSITE language}
+
+The PROSITE language represents protein sequence patterns.
+
+\begin{itemize}
+\item x: An arbitrary amino acid
+\item -: Separating elements
+\item \verb|[]|: A list of amino acids
+\item \{\}: A list of not accepted amino acids
+\item (): A range of en element
+\end{itemize}
+
+Find all matched sequences for the following patterns. Assume the alphabet M = \{A, B, C\}.
+
+\vspace{0.1 in}
+
+\begin{parts}
+
+%% (a)
+  \part \verb|A - [BC] - {BC}|
+  
+\begin{solution}[0.35 in]
+\begin{verbatim}
+ABA, ACA
+\end{verbatim}
+\end{solution}
+
+%% (b)
+  \part \verb|A - B(1, 2)|
+  
+\begin{solution}[0.35 in]
+\begin{verbatim}
+AB, ABB
+\end{verbatim}
+\end{solution}
+
+%% (c)
+  \part \verb|A - x - C|
+  
+\begin{solution}[0.35 in]
+\begin{verbatim}
+AAC, ABC, ACC
+\end{verbatim}
+\end{solution}
+
+\end{parts}
