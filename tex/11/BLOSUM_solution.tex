@@ -1,0 +1,75 @@
+\question \textbf{BLOSUM}
+
+BLOSUM uses several thousand blocks to calculate the probabilities of accepted mutation. Use the following definitions and Block1 \& Block2 to solve the problems.
+\begin{align*}
+f_{ab}:& \text{ Frequencies of an observed pair } a \text{ and } b. \\
+T:& \text{ Total number of pairs from all blocks. } \\
+ & \text{ The number of pairs can be calculated as } 1/2wm(m-1). \\
+p_a:& \text{ } p_a = f_{aa} + \sum_{e \neq a} f_{ae}/2 \\
+e_{aa}:&  \text{ } p_a p_a \\
+e_{ab}:&  \text{ } p_a p_b + p_b p_a = 2 p_a p_b
+\end{align*}
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+Block1 & Block2 \\
+CAGC   & GGA    \\
+GTAC   & GTA    \\
+CAGC   &       
+\end{tabular}
+\end{table}
+
+\begin{parts}
+
+%% (a)
+  \part Count the occurrences of all pairs.
+  
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+  & A                        & G                        & C                        & T                        \\ \hline
+A & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 2 \\ \hline
+G & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 1 \\ \hline
+C & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 4 & \cellcolor[HTML]{CCE5FF} 0  \\ \hline
+T & \cellcolor[HTML]{CCE5FF} 2 & \cellcolor[HTML]{CCE5FF} 1 & \cellcolor[HTML]{CCE5FF} 0 & \cellcolor[HTML]{CCE5FF} 0 \\ \hline
+\end{tabular}
+\end{table}
+
+%% (b) 
+  \part Calculate $T$.
+
+\begin{solution}[0.35 in]
+$(1/2 \times 4 \times 3 \times 2) + (1/2 \times 3 \times 2 \times 1) = 12 + 3 = 15$
+\end{solution}  
+ 
+%% (c) 
+  \part Calculate $f_{AA}$ and $f_{AG}$.
+
+\begin{solution}[0.35 in]
+$f_{AA} : 2/15, \quad  f_{AG} : 2/15$
+\end{solution}  
+
+%% (d) 
+  \part Calculate $p_A$ and $p_G$.
+
+\begin{solution}[0.35 in]
+$p_A : 8/30, \quad  p_G : 9/30$
+\end{solution}  
+
+%% (e) 
+  \part Calculate $e_{AA}$ and $e_{AG}$.
+
+\begin{solution}[0.35 in]
+$e_{AA} : 64/900, \quad  e_{AG} : 144/900$
+\end{solution}  
+
+%% (f) 
+  \part Calculate $f_{AA}/e_{AA}$ and $f_{AG}/e_{AG}$.
+
+\begin{solution}[0.35 in]
+$f_{AA}/e_{AA} : 1.875, \quad  f_{AG}/e_{AG} : 0.833$
+\end{solution}  
+
+\end{parts}
+
